@@ -1,6 +1,7 @@
 const authService = require('../services/authService');
 
 
+
 const register = async (req, res) => {
     try {
         const user = await authService.register(req.body);
@@ -11,6 +12,7 @@ const register = async (req, res) => {
 };
 
 const login = async (req, res) => {
+    console.log("LOGIN HIT");
     try {
         const result = await authService.login(req.body.email, req.body.password);
         res.json(result);
