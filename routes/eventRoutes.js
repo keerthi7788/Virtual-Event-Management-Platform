@@ -1,7 +1,11 @@
 const router = require('express').Router();
-const authController = require('../controllers/authController');
+const eventController = require('../controllers/eventController');
+const authMiddleware = require('../middleware/authMiddleware');
 
-router.post('/register', authController.register);
-router.post('/login', authController.login);
+router.post('/', authMiddleware, eventController.createEvent);
+router.get('/', eventController.getAllEvents);
+router.get('/:id', eventController.getEventById);
+router.put('/:id', authMiddleware, eventController.updateEvent);
+router.delete('/:id', authMiddleware, eventController.deleteEvent);
 
 module.exports = router;

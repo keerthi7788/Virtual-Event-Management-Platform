@@ -1,7 +1,8 @@
+// authMiddleware.js
 const jwt = require('jsonwebtoken');
-const JWT_SECRET = "secret123";
+const JWT_SECRET = process.env.JWT_SECRET
 
-exports.authenticate = (req, res, next) => {
+module.exports = (req, res, next) => {
     const authHeader = req.headers.authorization;
     if (!authHeader) return res.status(401).json({ message: "No token provided" });
 
