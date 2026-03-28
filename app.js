@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const app= express();
 app.use(express.json());
-const authRoute= require('./routes/authRoute');
+const authRoute= require('./routes/authRoutes');
 const eventRoutes= require('./routes/eventRoutes');
 const participantRoutes = require('./routes/participantRoutes');
 //Routes
