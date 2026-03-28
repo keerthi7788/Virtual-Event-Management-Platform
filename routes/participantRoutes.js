@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const eventController = require('../controllers/eventController');
-const authMiddleware = require('../middlewares/authMiddleware');
+const authMiddleware = require('../middleware/authMiddleware');
 
 router.post('/', authMiddleware, eventController.createEvent);
 router.get('/', eventController.getAllEvents);

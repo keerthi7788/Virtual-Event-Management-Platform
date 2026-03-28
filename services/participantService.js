@@ -1,6 +1,6 @@
 const { v4: uuidv4 } = require('uuid');
 const participantRepo = require('../repositories/participantRepo');
-const eventRepo = require('../repositories/eventRepo');
+const eventRepo = require('../repositories/eventRepository');
 
 // MOCK EMAIL
 const sendEmail = async (email, event) => {

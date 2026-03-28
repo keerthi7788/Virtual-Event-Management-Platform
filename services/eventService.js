@@ -1,5 +1,5 @@
 const { v4: uuidv4 } = require('uuid');
-const eventRepo = require('../repositories/eventRepo');
+const eventRepo = require('../repositories/eventRepository');
 
 // CREATE EVENT
 
