@@ -13,6 +13,7 @@ const getAllEvents = () => {
 
 // GET EVENT BY ID
 const getEventById = (id) => {
+    console.log("Searching for event with ID:", id);
     return events.find(e => e.id === id);
 };
 

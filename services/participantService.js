@@ -13,6 +13,7 @@ const sendEmail = async (email, event) => {
 
 const registerForEvent = async (eventId, user) => {
     const event = eventRepo.getEventById(eventId);
+    console.log("Event found:", event);
     if (!event) throw new Error("Event not found");
 
     const existing = participantRepo.findByUserAndEvent(user.userId, eventId);
